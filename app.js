@@ -13,6 +13,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.send("welcome");
+});
+
 app.get("/get-list", (req, res) => {
   res.status(200).json({
     status: 200,
